@@ -1,0 +1,104 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+  background:black;
+  color:white;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#ff4d6d,#6a11cb);
+}
+
+.title{
+  font-size:70px;
+  animation:glow 2s infinite alternate;
+}
+
+.subtitle{
+  margin-top:20px;
+  font-size:24px;
+}
+
+button{
+  margin-top:40px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  font-size:20px;
+  cursor:pointer;
+  background:white;
+  color:#ff4d6d;
+}
+
+.message{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+  background:#111;
+}
+
+.photo{
+  width:250px;
+  border-radius:20px;
+  margin-bottom:30px;
+  box-shadow:0 0 20px pink;
+}
+
+.message h2{
+  font-size:50px;
+}
+
+.message p{
+  margin-top:20px;
+  max-width:700px;
+  line-height:1.8;
+  font-size:22px;
+}
+
+.hidden{
+  display:none;
+}
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 10px white;
+  }
+  to{
+    text-shadow:0 0 30px pink;
+  }
+}
+
+.hearts::before{
+  content:"❤️ ❤️ ❤️ ❤️ ❤️";
+  position:fixed;
+  top:-10%;
+  width:100%;
+  font-size:40px;
+  animation:fall 10s linear infinite;
+}
+
+@keyframes fall{
+  0%{
+    transform:translateY(-100px);
+  }
+
+  100%{
+    transform:translateY(120vh);
+  }
+}
